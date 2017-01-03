@@ -34,9 +34,9 @@ Python script that prints out the poem "The Zen of Python", by TimPeters
 
 ##100-write.py
  a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19
-    - Use the function write from the sys module
-    - You are not allowed to use print
-    - You script should print to stderr
++ Use the function write from the sys module
++ You are not allowed to use print
++ You script should print to stderr
     - Your script should exit with the status code 1
 
 ##101-compile
