@@ -3,5 +3,5 @@ i = ord('a')
 
 while (i <= ord('z')):
     if (chr(i) != 'e' and chr(i) != 'q'):
-        print(chr(i), end="")
+        print("{}".format(chr(i)), end="")
     i += 1
