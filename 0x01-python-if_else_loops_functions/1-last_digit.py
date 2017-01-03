@@ -7,7 +7,7 @@ if number < 0:
 else:
     lst_num = number % 10
 
-print("last digit of", '{:d}'.format(number), "is", '{:d}'.format(lst_num),
+print("Last digit of", '{:d}'.format(number), "is", '{:d}'.format(lst_num),
       end="")
 if lst_num > 5:
     print(" and is greater than 5")
