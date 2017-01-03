@@ -37,7 +37,7 @@ Python script that prints out the poem "The Zen of Python", by TimPeters
 + Use the function write from the sys module
 + You are not allowed to use print
 + You script should print to stderr
-    - Your script should exit with the status code 1
++ Your script should exit with the status code 1
 
 ##101-compile
 A shell script that compiles a Python script file.
