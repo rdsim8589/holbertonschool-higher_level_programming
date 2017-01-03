@@ -2,5 +2,5 @@
 i = 0
 
 while (i <= 98):
-    print(hex(i))
+    print("{}".format(hex(i)))
     i += 1
