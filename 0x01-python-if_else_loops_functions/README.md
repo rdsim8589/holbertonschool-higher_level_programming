@@ -8,6 +8,7 @@ The output of the program should be
   - if the number is 0: is zero
   - if the number is less than 0: is negative
 + followed by a new line
+
 example:
 ```
 $ ./0-positive_or_negative.py
@@ -23,6 +24,7 @@ The output of the program should be:
   - if the number is 0: the string and is 0
   - if the number is less than 6 and not 0: the string and is less than 6 and not 0
 + followed by a new line
+
 example:
 ```
 $ ./1-last_digit.py
@@ -38,6 +40,7 @@ $ ./1-last_digit.py
   - if the number is 0: the string and is 0
   - if the number is less than 6 and not 0: the string and is less than 6 and not 0
 + followed by a new line
+
 example:
 ```
 $ ./2-print_alphabet.py
@@ -46,6 +49,7 @@ $ ./2-print_alphabet.py
 
 ##3-print_alphabt.py
 A program that prints the alphabet except q and e, in lowercase, not followed by a new line.
+
 example:
 ```
 $ ./3-print_alphabt.py
@@ -54,6 +58,7 @@ $ ./3-print_alphabt.py
 
 ##4-print_hexa.py
 A program that prints all numbers from 0 to 98 in decimal and in hexadecimal
+
 example:
 ```
 $ ./4-print_hexa.py
@@ -66,6 +71,7 @@ $ ./4-print_hexa.py
 
 ##5-print_comb2.py
 a program that prints numbers from 0 to 99, seprated by a , followed by a space.
+
 example:
 ```
 $ ./5-print_comb2.py
@@ -74,6 +80,7 @@ $ ./5-print_comb2.py
 
 ##6-print_comb3.py
 A program that prints all possible different combinations of two digits separated by , followed by a space
+
 example:
 ```
 $ ./6-print_comb3.py
@@ -85,6 +92,7 @@ A function that checks for lowercase character.
 + Prototype: def islower(c):
 + Returns True if c is lowercase
 + Returns False otherwise
+
 example:
 ```
 $ cat 7main.py
@@ -107,6 +115,7 @@ $./7main.py
 
 ##8-uppercase.py
 a function that print a string in uppercase followed by a new line
+
 example:
 ```
 $ cat 8-main.py
@@ -122,7 +131,8 @@ $ ./8-main.py
 ```
 
 ##9-print_last_digit.py
- function that prints the last digit of a number
+A function that prints the last digit of a number
+
 example:
 ```
 $ cat 9-main.py
@@ -139,6 +149,7 @@ $ ./9-main.py
 ```
 ##10-add.py
 A function that adds two integers and returns the result.
+
 example:
 ```
 $ cat 10-main.py
@@ -157,6 +168,7 @@ $ ./10-main.py
 
 ##11-pow.py
 A function that computes a to the power of b and return the value.
+
 example:
 ```
 $ cat 11-main.py
@@ -181,6 +193,7 @@ $ ./11-main.py
 A function that prints the numbers from 1 to 100 separated by a space.
 + But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz.
 + For numbers which are multiples of both three and five print FizzBuzz.
+
 example:
 ```
 $ cat 12-main.py
@@ -196,6 +209,7 @@ $ ./12-main.py | cat -e
 
 ##100-print_tebahpla.py
 a program that prints the alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.
+
 example:
 ```
 $ ./100-print_tebahpla.py
@@ -204,6 +218,8 @@ $ ./100-print_tebahpla.py
 
 ##101-remove_char_at.py
 A function that creates a copy of the string, removing the character at the position n.
+
+example:
 ```
 $ cat 101-main.py
 >> #!/usr/bin/env python3
