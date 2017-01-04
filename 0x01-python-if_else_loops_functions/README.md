@@ -12,7 +12,7 @@ The output of the program should be
 example:
 ```
 $ ./0-positive_or_negative.py
--4 is negative
+>> -4 is negative
 ```
 
 ##1-last_digit.py
