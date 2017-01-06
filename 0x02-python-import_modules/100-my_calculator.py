@@ -15,5 +15,5 @@ if __name__ == "__main__":
     if op in signs:
         print("{:d} {} {:d} = {:d}".format(a, op, b, SignByFun[op](a, b)))
     else:
-        print("Unknown operator. Available operators: +, -, x and *")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
