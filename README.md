@@ -2,15 +2,16 @@
 This is the Holberton Higher Level programming assignments
 
 ##0x00-python-hello_world
-|These assignments are based around python 3.4 and cover these questions| |
 |--------|----------|
+|These assignments are based around python 3.4 and cover these questions| |
+
 | What is the Zen of Python | How to use the Python interpreter|
 | How to print text and variables using print | How to use strings|
 | What are indexing and slicing in Python | What is the official Holberton Python coding style and how to check your code with PEP 8|
 
 ##0x01-0x01-python-if_else_loops_functions
 |These assignments are based around python 3.4 and cover these questions| |
-|------------------------------------------|---------------------------------|
+|--------|----------|
 | How to use the if, if ... else statements | How to use comments |
 | How to affect values to variables | How to use the while and for loops
 | How is the Python's for different from the C's? | How to use the break and continues statements|
