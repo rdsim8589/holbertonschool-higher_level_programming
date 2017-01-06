@@ -19,7 +19,7 @@ This is the Holberton Higher Level programming assignments
 | What does return a function that does not use any return statement | Scope of variables|
 | What's a traceback | What are the arithmetic operators and how to use them|
 
-##0x02
+##0x02-python-import_modules
 |These assignments are based around python 3.4 and cover these questions| |
 |----------------------|-----------|
 | How to import functions from another file| How to use imported functions|
