@@ -11,24 +11,22 @@ def matrix_divided(matrix, div):
     """
     Returns a copy of the matrix divided by the int/float of div
     """
-    cpy_mtx = []
-    row_len = len(matrix[0])
-
-
-    if type(matrix) != list:
+    if not isinstance(matrix, list) or matrix == [] or not isinstance(matrix[0],list):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    if type(div) != int and type(div) != float:
+    if not isinstance(div, int or float):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
+
+    row_len = len(matrix[0])
+    cpy_mtx = []
     for row in matrix:
-        if type(row) != list:
+        if not isinstance(row, list) or row == []:
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         if row_len != len(row):
             raise TypeError("Each row of the matrix must have the same size")
         tmp_row = []
         for number in row:
-
             if type(number) != int and type(number) != float:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             tmp_row.append(round(number/div, 2))
