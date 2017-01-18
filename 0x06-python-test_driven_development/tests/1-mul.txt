@@ -1,0 +1,45 @@
+Test suite for arugment multiplication
+===========================================
+
+use python3 -m doctest -v ./tests/1-mul.txt
+python3 -c 'print(__import__("1-mul").mul__doc__)'
+
+>>> mul = __import__('1-mul').mul
+
+------------------------
+expected output:
+>>> mul(3, 4)
+12
+
+>>> mul(3.0, 4)
+12.0
+
+>>> mul("hello ", 3)
+'hello hello hello '
+
+>>> mul("ab", "cd")
+Traceback (most recent call last):
+	  ...
+TypeError: can't multiply sequence by non-int of type 'str'
+
+
+>>> mul(2, ['a', 'b'])
+['a', 'b', 'a', 'b']
+
+
+>>> mul(2.0, ['a', 'b'])
+Traceback (most recent call last):
+	  ...
+TypeError: can't multiply sequence by non-int of type 'float'
+
+
+>>> mul(['a', 'b'], ['c', 'd'])
+Traceback (most recent call last):
+	  ...
+TypeError: can't multiply sequence by non-int of type 'list'
+
+
+>>> mul(['a', 'b'], "hello")
+Traceback (most recent call last):
+	  ...
+TypeError: can't multiply sequence by non-int of type 'str'
