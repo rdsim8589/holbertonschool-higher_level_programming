@@ -70,3 +70,109 @@ ERROR HANDLING OUTPUT:
 	Traceback (most recent call last):
 		  ...
 	TypeError: can't multiply sequence by non-int of type 'tuple'
+
+
+Tracebacks Variable and Int
+	   >>> mul(foo, 2)
+	   Traceback (most recent call last):
+	   ...
+	   NameError: name 'foo' is not defined
+
+
+Tracebacks SynaxError Any
+	   >>> mul( , 2)
+	   Traceback (most recent call last):
+	   ...
+	   SyntaxError: invalid syntax
+
+
+Tracebacks TypeError Dict and Int
+	   >>> mul({"a":1, "b":[1, 2, 3]}, 2)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: unsupported operand type(s) for *: 'dict' and 'int'
+
+
+Tracebacks TypeError String and Float
+	   >>> mul("a string", 2.1)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: can't multiply sequence by non-int of type 'float'
+
+
+Tracebacks TypeError	  String and String
+	   >>> mul("coffee", "good")
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: can't multiply sequence by non-int of type 'str'
+
+
+Tracebacks TypeError	  Tuple and None
+	   >>> mul((2, 3), None)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: can't multiply sequence by non-int of type 'NoneType'
+
+
+Tracebacks TypeError	  List and None
+	   >>> mul([2, 3], None)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: can't multiply sequence by non-int of type 'NoneType'
+
+
+Tracebacks TypeError	  Set and Int
+	   >>> mul({1, 2, 3}, 3)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: unsupported operand type(s) for *: 'set' and 'int'
+
+
+Tracebacks TypeError   Float and None
+	   >>> mul(2.0, None)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+
+
+
+Tracebacks TypeError   Int and None
+	   >>> mul(2, None)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+
+
+Tracebacks TypeError   None and None
+	   >>> mul(None, None)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+
+
+Tracebacks TypeError   Int and Function
+	   >>> mul(3, lambda x: x)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: unsupported operand type(s) for *: 'int' and 'function'
+
+
+Tracebacks TypeError Any.
+	   >>> mul(1)
+	   Traceback (most recent call last):
+	   ...
+	   TypeError: mul() missing 1 required positional argument: 'b'
+
+
+
+Tracebacks TypeError Any.
+	   >>> mul(1, 2, 3)
+	   Traceback (most recent call last):
+	   TypeError: mul() takes 2 positional arguments but 3 were given
+
+
+TypeError   No args
+	    >>> mul()
+	    Traceback (most recent call last):
+	    ...
+	    TypeError: mul() missing 2 required positional arguments: 'a' and 'b'
