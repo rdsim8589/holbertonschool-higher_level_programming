@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
     """
     list_of_list = "matrix must be a matrix (list of lists) of integers/floats"
 
-    if not isinstance(div, int or float):
+    if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
 
     if not isinstance(matrix, list) or matrix == []:
