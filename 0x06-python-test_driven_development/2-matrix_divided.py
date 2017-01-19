@@ -26,8 +26,6 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     row_len = len(matrix[0])
-    if row_len == 0:
-        raise TypeError(list_of_list)
     cpy_mtx = []
     for row in matrix:
         if not isinstance(row, list) or row == []:
