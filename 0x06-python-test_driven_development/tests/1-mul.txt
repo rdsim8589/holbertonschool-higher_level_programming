@@ -204,3 +204,13 @@ Correct Usage	       Basic Boolean and Boolean
 Correct Usage	       Basic Boolean and Boolean
 	>>> mul(False, False)
 	0
+
+
+Correct Usage	 Basic	Negative Int and Int
+	>>> mul(-1, 2)
+	-2
+
+
+Correct  Usage	 Basic	Int and Negative Int
+	 >>> mul(1, -2)
+	 -2
