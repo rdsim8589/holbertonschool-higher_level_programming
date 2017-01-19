@@ -13,15 +13,5 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    char_indent = ".?:"
-    i = 0
-    sentence = []
-    while i < len(text):
-        if text[i] == ' ' and text[i-1] in char_indent:
-            i += 1
-            pass
-        sentence.append(text[i])
-        if text[i] in char_indent:
-            sentence.append("\n\n")
-        i += 1
-    print("".join(sentence), end ="")
+    let_str = "".join([let + "\n\n" if let in "?.:" else let for let in text])
+    print("\n".join([line.strip() for line in let_str.split("\n")]), end="")
