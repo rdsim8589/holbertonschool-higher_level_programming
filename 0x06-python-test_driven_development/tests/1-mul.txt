@@ -176,3 +176,31 @@ TypeError   No args
 	    Traceback (most recent call last):
 	    ...
 	    TypeError: mul() missing 2 required positional arguments: 'a' and 'b'
+
+Correct Usage	       Basic Int and Boolean
+	>>> mul(2, False)
+	0
+
+
+Correct Usage	       Basic Boolean and Int
+	>>> mul(True, 2)
+	2
+
+
+Correct Usage	       Basic Boolean and Boolean
+	>>> mul(True, False)
+	0
+
+Correct Usage	       Basic Boolean and Boolean
+	>>> mul(True, True)
+	1
+
+
+Correct Usage	       Basic Boolean and Boolean
+	>>> mul(False, True)
+	0
+
+
+Correct Usage	       Basic Boolean and Boolean
+	>>> mul(False, False)
+	0
