@@ -1,0 +1,86 @@
+The ``5-text_indentation`` module
+========================
+
+Using ``text_indentation``
+      >>> text_indentation=__import__("5-text_indentation").text_indentation
+
+Correct Usage	 Basic	String
+>>> text_indentation("What? Pants are: blue. Purple.")
+What?
+<BLANKLINE>
+Pants are:
+<BLANKLINE>
+blue.
+<BLANKLINE>
+Purple.
+<BLANKLINE>
+
+
+Correct Usage	 Basic	"String
+>>> text_indentation(".?\nWaffles:\n?")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+<BLANKLINE>
+Waffles:
+<BLANKLINE>
+<BLANKLINE>
+?
+<BLANKLINE>
+
+
+Correct Usage	 Basic	String
+>>> text_indentation("Howdy, Yall!")
+Howdy, Yall!
+
+
+Correct Usage	 Basic	String
+>>> text_indentation(" SpaceFirst")
+SpaceFirst
+
+
+Correct Usage	 Basic	"String
+>>> text_indentation("  .  ?     :      ")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+Correct Usage	 Basic	String
+>>> text_indentation("    MY SPOON IS TOO BIG!...    I am a banana.\n     blearg    ")
+MY SPOON IS TOO BIG!.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+I am a banana.
+<BLANKLINE>
+<BLANKLINE>
+blearg
+
+
+
+Tracebacks	TypeError	Int
+>>> text_indentation(4)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+
+Tracebacks TypeError "Negative Int
+
+>>> text_indentation(-4)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Tracebacks TypeError NoneType
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
