@@ -15,15 +15,14 @@ def matrix_divided(matrix, div):
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
 
-    if not isinstance(matrix, list) or matrix == []:
+    if not isinstance(matrix, list) or not matrix:
         raise TypeError(list_of_list)
 
     if not isinstance(matrix[0], list):
         raise TypeError(list_of_list)
-
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
 
     row_len = len(matrix[0])
     cpy_mtx = []
