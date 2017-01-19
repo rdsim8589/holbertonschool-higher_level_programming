@@ -29,6 +29,11 @@ EXPECTED OUTPUT:
 	12.0
 
 
+
+	>>> mul(0.00000, 1)
+	0.0
+
+
 3.
 	>>> mul("hello ", 3)
 	'hello hello hello '
@@ -253,3 +258,81 @@ Correct Usage	Edge	Infinity and Infinity
 Correct Usage	 Edge	Int and Int
 	>>> mul(1E+100, -3E+102)
 	-2.9999999999999997e+202
+
+
+Correct Usage:
+
+    >>> print(mul(1, 2))
+    2
+
+    >>> print(mul(5, -2))
+    -10
+
+    >>> print(mul(-5, -2))
+    10
+
+    >>> print(mul(5, 2.0))
+    10.0
+
+    >>> print(mul(5.0, 2.0))
+    10.0
+
+    >>> print(mul(5.000, 2.0))
+    10.0
+
+    >>> print(mul(5.0005, 2.0))
+    10.001
+
+    >>> print(mul(0, 2))
+    0
+
+    >>> print(mul(0, -2))
+    0
+
+    >>> print(mul(0, 0.3))
+    0.0
+
+    >>> print(mul(5.0, 0))
+    0.0
+
+    >>> print(mul(-5.0, 0))
+    -0.0
+
+    >>> print(mul(2, True))
+    2
+
+    >>> print(mul(2, False))
+    0
+
+    >>> print(mul(-2, True))
+    -2
+
+    >>> print(mul(-2, False))
+    0
+
+    >>> print(mul(2.2, True))
+    2.2
+
+    >>> print(mul(2.2, False))
+    0.0
+
+    >>> print(mul(-2.2, True))
+    -2.2
+
+    >>> print(mul(-2.2, False))
+    -0.0
+
+    >>> print(mul(5, "ha"))
+    hahahahaha
+
+    >>> print(mul((1, 2), 4))
+    (1, 2, 1, 2, 1, 2, 1, 2)
+
+    >>> print(mul([3, 4], 4))
+    [3, 4, 3, 4, 3, 4, 3, 4]
+
+    >>> mul(1e10000, 1e10000)
+    inf
+
+    >>> mul(float("inf"), float("inf"))
+    inf
