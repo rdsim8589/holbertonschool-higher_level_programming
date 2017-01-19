@@ -227,3 +227,16 @@ multiple dictionaries
 	 ...
 	 TypeError: unsupported operand type(s) for *: 'dict' and 'int'
 
+Correct Usage	    Edge	Large int and Large int
+	>>> mul(1e10000, 1e10000)
+	inf
+
+
+Correct Usage	Edge	Infinity and Infinity
+	>>> mul(float("inf"), float("inf"))
+	inf
+
+
+Correct Usage	 Edge	Int and Int
+	>>> mul(1E+100, -3E+102)
+	-2.9999999999999997e+202
