@@ -6,28 +6,234 @@ Using ``add_interger``
 
     >>> add_integer = __import__('0-add_integer').add_integer
 
-expected output:
 
-    >>> add_integer(1, 2)
-    3
-
-    >>> add_integer(2.3, 2)
-    4
-
-    >>> add_integer(1, 2.3)
-    3
-
-    >>> add_integer(1, 'hello')
+TRACEBACK OUTPUT
+====================
+if a is a string
+   >>> add_integer("School", 1)
     Traceback (most recent call last):
         ...
+    TypeError: a must be an integer
+
+
+if b is a string
+   >>> add_integer(1, "School")
+    Traceback (most recent call last):
+    ...
     TypeError: b must be an integer
 
-    >>> add_integer('hello', 1)
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer
 
-    >>> add_integer('hello', 'hello')
+if a is float("inf")
+   >>> add_integer(float("inf"), 1)
     Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer
+     ...
+    OverflowError: cannot convert float infinity to integer
+
+
+b is float("inf")
+    >>> add_integer(1, float("inf"))
+    Traceback (most recent call)
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+
+if a is -float("inf")
+   >>> add_integer(-float("inf"), 1)
+   Traceback (most recent call)
+    ...
+   OverflowError: cannot convert float infinity to integer
+
+
+if b is -float("inf")
+   >>> add_integer(1, -float("inf"))
+   Traceback (most recent call)
+    ...
+   OverflowError: cannot convert float infinity to integer
+
+
+if a is a list
+   >>> add_integer([1, 2, 3], 0)
+   Traceback (most recent call)
+    ...
+   TypeError: a must be an integer
+
+
+if b is a list
+   >>> add_integer(0, [1, 2, 3])
+   Traceback (most recent call)
+    ...
+   TypeError: a must be an integer
+
+
+if a is a dictionary
+   >>> add_integer({1: "yo"}, 0)
+   Traceback (most recent call)
+    ...
+   TypeError: a must be an integer
+
+
+if b is a dictionary
+   >>> add_integer({1: "yo"}, 0)
+   Traceback (most recent call)
+    ...
+   TypeError: b must be an integer
+
+
+Both are strings
+     >>> add_integer("Hello", "Holberton")
+     Traceback (most recent call)
+     ...
+     TypeError: a must be an integer
+
+if a is a boolean
+   >>> add_integer(True, 2)
+   Traceback (most recent call)
+     ...
+   TypeError: a must be an integer
+
+if b is a boolean
+   >>> add_integer(2, False)
+   Traceback (most recent call)
+     ...
+   TypeError: b must be an integer
+
+
+if a is None
+   >>> add_integer(None, 1)
+   Traceback (most recent call)
+     ...
+   TypeError: a must be an integer
+
+
+if b is None
+   >>> add_integer(1,None)
+   Traceback (most recent call)
+     ...
+   TypeError: b must be an integer
+
+
+if both are None
+   >>> add_integer(None, None)
+   Traceback (most recent call)
+     ...
+   TypeError: a must be an integer
+
+
+a is a set
+   >>> add_integer({1, 2, 3}, 2)
+   Traceback (most recent call)
+     ...
+   TypeError: a must be an integer
+
+
+b is a set
+   >>> add_integer(2, {1, 2, 3})
+   Traceback (most recent call)
+     ...
+   TypeError: b must be an integer
+
+
+a is a tuple
+   >>> add_integer((1, 2, 3), 2)
+   Traceback (most recent call)
+     ...
+   TypeError: a must be an integer
+
+b is a tuple
+   >>> add_integer(2, (1, 2, 3))
+   Traceback (most recent call)
+     ...
+   TypeError: b must be an integer
+
+
+if a converts to int
+   >>> add_integer("17", 2)
+   Traceback (most recent call)
+     ...
+   TypeError: a must be an integer
+
+
+if b converts to int
+   >>> add_integer(2,"17")
+   Traceback (most recent call)
+     ...
+   TypeError: b must be an integer
+
+
+if a is a function
+   >>> add_integer(lambda x: x, 2.5)
+   Traceback (most recent call)
+     ...
+   TypeError: a must be an integer
+
+
+if b is a function
+   >>> add_integer(2.5,lambda x: x)
+   Traceback (most recent call)
+     ...
+   TypeError: b must be an integer
+
+
+if no parameters are passed
+   >>> add_integer( , )
+   Traceback (most recent call)
+     ...
+   TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+
+if only one parameter is passed
+   >>> add_integer(10, )
+   Traceback (most recent call)
+     ...
+   TypeError: add_integer() missing 1 required positional arguments: 'b'
+
+
+Both are boolean
+   >>> add_integer(True, False)
+   Traceback (most recent call)
+     ...
+   TypeError: a must be an integer
+
+
+BASE CASE
+==================
+both positive
+     >>> add_integer(2, 96)
+     98
+
+both negative
+     >>> add_integer(-2, -96)
+     -98
+
+a positive, b negative
+     >>> add_integer(100, -2)
+     98
+
+
+a negative, b positive
+  >>> add_integer(-2, 100)
+  98
+
+
+int cast occurs prior to calculation
+    >>> add_integer(100.1, -2.9)
+    98
+
+
+a is float, b is int, both positive
+    >>> add_integer(10.9, 2)
+    12
+
+
+a is int, b is float, both positive
+    >>> add_integer(2, 10.9)
+    12
+
+
+a is negative float, b is positive int
+    >>> add_integer(-2.9, 10)
+    8
+
+a is positive float, b is negative int
+    >>> add_integer(2.9, -10)
+    -8
