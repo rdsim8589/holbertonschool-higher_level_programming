@@ -214,3 +214,16 @@ Correct Usage	 Basic	Negative Int and Int
 Correct  Usage	 Basic	Int and Negative Int
 	 >>> mul(1, -2)
 	 -2
+
+multiply sets
+	 >>> mul({1,2}, 2)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: unsupported operand type(s) for *: 'set' and 'int'
+
+multiple dictionaries
+	 >>> mul({1:5,2:6}, 2)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: unsupported operand type(s) for *: 'dict' and 'int'
+
