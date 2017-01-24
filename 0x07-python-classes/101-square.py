@@ -15,9 +15,8 @@ class Square:
         self.__size = size
         self.__position = position
 
-    def __repr__(self):e
+    def __repr__(self):
         return self.my_print()
-
 
     def __str__(self):
         return self.my_print()
@@ -49,7 +48,7 @@ class Square:
         """ position setter
         """
         if type(value) == tuple and len(value) == 2:
-            if type(value[0]) == int and type(value[1]) =  int:
+            if type(value[0]) == int and type(value[1]) == int:
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = value
                     return
@@ -69,10 +68,10 @@ class Square:
         if size == 0:
             return()
         else:
-            print_sq = []
+            new_line = ""
             for i in range(position[1]):
-                print_sq.append("".join([" "
-                                         for i in range(size + position[0])]))
+                new_line += "\n"
+            print_sq = []
             for i in range(size):
                 row = []
                 for i in range(size + position[0]):
@@ -81,4 +80,4 @@ class Square:
                     else:
                         row.append("#")
                 print_sq.append("".join(row))
-            return "\n".join(print_sq)
+            return new_line + "\n".join(print_sq)
