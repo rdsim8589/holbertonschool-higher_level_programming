@@ -4,6 +4,8 @@ This is the Square module.
 
 The Square module contains the Square class
 """
+
+
 class Square:
     """ This is the Square class
     """
@@ -32,8 +34,7 @@ class Square:
         """ returns the current square area
         """
         size = self.__size
-        return(size **2)
-
+        return(size ** 2)
 
     def my_print(self):
         """ prints a square of #
@@ -42,5 +43,5 @@ class Square:
         if size == 0:
             print()
         else:
-            print("\n".join(["".join(['#' for i in range(size)]) \
+            print("\n".join(["".join(['#' for i in range(size)])
                              for i in range(size)]))

@@ -4,6 +4,8 @@ This is the Square module.
 
 The Square module contains the Square class
 """
+
+
 class Square:
     """
     This is the Square class
@@ -38,4 +40,4 @@ class Square:
         returns the current square area
         """
         size = self.__size
-        return(size **2)
+        return(size ** 2)

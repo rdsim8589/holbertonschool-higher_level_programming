@@ -4,13 +4,15 @@ This is the Square module.
 
 The Square module contains the Square class
 """
+
+
 class Square:
     """ This is the Square class
     """
     def __init__(self, size=0):
         """ The __init__ method
         """
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
@@ -32,4 +34,4 @@ class Square:
         """ returns the current square area
         """
         size = self.__size
-        return(size **2)
+        return(size ** 2)

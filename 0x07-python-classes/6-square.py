@@ -4,10 +4,12 @@ This is the Square module.
 
 The Square module contains the Square class
 """
+
+
 class Square:
     """ This is the Square class
     """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """ The __init__ method
         """
         self.__size = size
@@ -46,14 +48,11 @@ class Square:
                     return
         raise TypeError("position must be a tuple of 2 positive integers")
 
-
-
     def area(self):
         """ returns the current square area
         """
         size = self.__size
-        return(size **2)
-
+        return(size ** 2)
 
     def my_print(self):
         """ prints a square of #
