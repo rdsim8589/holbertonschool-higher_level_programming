@@ -66,8 +66,6 @@ class Rectangle:
     def my_print(self):
         """ returns a string of a rectangle
         """
-
-
         width = self.width
         height = self.height
         if width == 0 or height == 0:
