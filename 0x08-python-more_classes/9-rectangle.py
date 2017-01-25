@@ -66,7 +66,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 *(self.__width + self.__height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
         """returns the string of the create rectangle
@@ -77,7 +77,6 @@ class Rectangle:
         """back up to __str__ returns the string of the create rectangle
         """
         return "Rectangle({}, {}) ".format(self.__width, self.__height)
-
 
     def my_print(self):
         """ returns a string of a rectangle
@@ -107,7 +106,7 @@ class Rectangle:
             return rect_2
 
     @classmethod
-    def square(cls ,size=0):
+    def square(cls, size=0):
         """ create a new Rectangle instance with width == height == size
         """
         return cls(size, size)
