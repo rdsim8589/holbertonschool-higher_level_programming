@@ -12,8 +12,8 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """ The __init__ method
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -41,7 +41,7 @@ class Square:
     def position(self, value):
         """ position setter
         """
-        if type(value) == tuple and len(value) == 2:
+        if isinstance(value, tuple) and len(value) == 2:
             if type(value[0]) == int and type(value[1]) == int:
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = value
