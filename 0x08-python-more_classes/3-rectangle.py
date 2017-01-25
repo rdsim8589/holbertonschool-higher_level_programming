@@ -66,11 +66,12 @@ class Rectangle:
     def my_print(self):
         """ returns a string of a rectangle
         """
-        if self.perimeter == 0:
-            return ""
+
 
         width = self.width
         height = self.height
+        if width == 0 or height == 0:
+            return ""
         rect_str = []
         for column in range(height):
             rect_str.append("".join(["#" for row in range(width)]))
