@@ -66,7 +66,7 @@ class Rectangle:
     def __repr__(self):
         """back up to __str__ returns the string of the create rectangle
         """
-        return "Rectangle({}, {}) ".format(self.__width, self.__height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def my_print(self):
         """ returns a string of a rectangle
