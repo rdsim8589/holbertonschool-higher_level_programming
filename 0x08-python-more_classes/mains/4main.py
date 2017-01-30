@@ -23,6 +23,4 @@ print(hex(id(new_rectangle)))
 print("--")
 
 print(new_rectangle is my_rectangle)
-print("this is new", type(new_rectangle))
-print("this is my", type(my_rectangle))
 print(type(new_rectangle) is type(my_rectangle))
