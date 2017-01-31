@@ -1,0 +1,12 @@
+The ``1-my_list module`` module
+
+=================================
+This is a text file in the reStructedText format to the test the above module.
+
+Using ``MyList``
+
+--------------------------
+
+First ``myList`` from the ``1-my_list`` module:
+      >>> myList=__import__('1-my_list').MyList
+
