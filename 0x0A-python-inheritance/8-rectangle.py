@@ -4,6 +4,8 @@ This is the base_geometry class
 """
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
 class Rectangle(BaseGeometry):
     """
     this is the Rectangle the class
