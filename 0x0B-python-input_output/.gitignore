@@ -1,2 +1,13 @@
 #ignore backup files
 *~
+
+#ignore .txt files
+*.txt
+
+# ignore anything with a #
+*\#*
+#ignore main files
+*main.py
+
+#ignore __pycache__
+__pycache__*
