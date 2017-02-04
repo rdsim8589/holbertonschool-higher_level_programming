@@ -14,7 +14,7 @@ def read_lines(filename="", nb_lines=0):
     line = 1
     with open(filename, encoding="utf-8") as myFile:
         if nb_lines <= 0 or nb_lines >= myFile.read().count('\n'):
-            print (myFile.read(), end="")
+            print(myFile.read(), end="")
         else:
             myFile.seek(0)
             while line <= nb_lines:
