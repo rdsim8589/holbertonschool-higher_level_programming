@@ -12,11 +12,12 @@ def read_lines(filename="", nb_lines=0):
     Read entire file if nb_lines <= 0 or nb_lines >= total lines
     """
     line = 1
-    with open(filename, encoding="utf-8") as myFile:
-        if nb_lines <= 0 or nb_lines >= myFile.read().count('\n'):
+    with open(filename, encoding="utf-8", mode='r') as myFile:
+        line_count = myFile.read().count('\n')
+        myFile.seek(0)
+        if nb_lines <= 0 or nb_lines >= line_count:
             print("{:s}".format(myFile.read()), end="")
         else:
-            myFile.seek(0)
             while line <= nb_lines:
                 print("{:s}".format(myFile.readline()), end="")
                 line += 1
