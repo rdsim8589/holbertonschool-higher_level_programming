@@ -4,7 +4,6 @@ This module contains the function
 
 append_after
 """
-import os
 
 
 def append_after(filename="", search_string="", new_string=""):
