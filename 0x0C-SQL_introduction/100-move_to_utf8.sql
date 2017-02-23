@@ -5,6 +5,6 @@ ALTER DATABASE
       COLLATE = utf8mb4_unicode_ci;
 
 ALTER TABLE
-      first_table
+      hbtn_0c_0.first_table
       CONVERT CHARACTER SET = utf8mb4
       COLLATE = utf8mb4_unicode_ci;
