@@ -2,6 +2,8 @@
 """
 This is the Filter by state module
 """
+
+
 if __name__ == "__main__":
     from sys import argv
     import MySQLdb
