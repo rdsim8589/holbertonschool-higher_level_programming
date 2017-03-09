@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-find all states with 'n' in it
+find all states with 'a' in it
 """
 
 
@@ -16,5 +16,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     for instance in session.query(State).order_by(State.id).filter(
-            State.name.like('%n%')):
+            State.name.like('%a%')):
         print("{}: {}".format(instance.id, instance.name))
