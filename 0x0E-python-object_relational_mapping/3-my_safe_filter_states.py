@@ -20,7 +20,8 @@ if __name__ == "__main__":
         if test is 0:
             print("execute failed!")
         for row in c.fetchall():
-            print(row)
+            if row[1] == argv[4]:
+                print(row)
     except IndexError:
         print("Give 4 arguments in the format \
         |mysql user| |mysql password| |database name|")
