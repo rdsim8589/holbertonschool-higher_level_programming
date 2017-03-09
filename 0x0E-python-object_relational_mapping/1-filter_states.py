@@ -16,8 +16,7 @@ if __name__ == "__main__":
         c = db.cursor()
         c.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
         for row in c.fetchall():
-            if row[1][0] == 'N':
-                print(row)
+            print(row)
     except IndexError:
         print("Give 3 arguments in the format \
         |mysql user| |mysql password| |database name|")
