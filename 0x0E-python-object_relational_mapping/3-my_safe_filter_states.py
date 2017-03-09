@@ -18,8 +18,6 @@ if __name__ == "__main__":
         test = c.execute("SELECT * FROM states\
         WHERE name = %s\
         ORDER BY id ASC", (argv[4],))
-        if test is 0:
-            print("execute failed!")
         while test > 0:
             test = test - 1
             print(c.fetchone())
