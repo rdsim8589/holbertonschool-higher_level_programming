@@ -13,7 +13,8 @@ if __name__ == "__main__":
         db = MySQLdb.connect(host="localhost",
                              user=argv[1],
                              passwd=argv[2],
-                             db=argv[3])
+                             db=argv[3],
+                             port=3306)
         c = db.cursor()
         state = re.sub(r'\W+', '', argv[4].split(";")[0])
         query = "SELECT * FROM states\
