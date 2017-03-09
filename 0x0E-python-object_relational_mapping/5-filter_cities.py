@@ -17,8 +17,6 @@ if __name__ == "__main__":
         FROM cities INNER JOIN states \
         ON states.id = cities.state_id AND states.name = %s \
         ORDER BY cities.id ASC", (argv[4],))
-        if test == 0:
-            print("execute failed!")
         cities = []
         for row in c.fetchall():
             cities.append(row[0])
