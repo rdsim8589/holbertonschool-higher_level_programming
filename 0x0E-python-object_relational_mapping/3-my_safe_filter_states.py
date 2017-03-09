@@ -22,6 +22,8 @@ if __name__ == "__main__":
         for row in c.fetchall():
             if row[1] == argv[4]:
                 print(row)
+        c.close()
+        db.close()
     except IndexError:
         print("Give 4 arguments in the format \
         |mysql user| |mysql password| |database name|")
