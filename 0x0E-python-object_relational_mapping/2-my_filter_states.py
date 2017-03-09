@@ -10,7 +10,6 @@ if __name__ == "__main__":
 
     try:
         db = MySQLdb.connect(host="localhost",
-                             port=3306,
                              user=argv[1],
                              passwd=argv[2],
                              db=argv[3])
@@ -21,6 +20,8 @@ if __name__ == "__main__":
         c.execute(query)
         for row in c.fetchall():
             print(row)
+        c.close()
+        db.close()
     except IndexError:
         print("Give 4 arguments in the format \
         |mysql user| |mysql password| |database name| |state name|")
