@@ -22,9 +22,9 @@ if __name__ == "__main__":
         test = c.execute(query)
         if test is 0:
             print("execute failed!")
-        for row in c.fetchall():
-            if row[1] == argv[4]:
-                print(row)
+        while test > 0:
+            test = test - 1
+            print(c.fetchone())
         c.close()
         db.close()
     except IndexError:
