@@ -22,5 +22,5 @@ if __name__ == "__main__":
             print("{}".format(instance.id))
             if found == 0:
                 found = 1
-            if found == 0:
-                print("Not found")
+        if found == 0:
+            print("Not found")
