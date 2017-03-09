@@ -19,7 +19,8 @@ if __name__ == "__main__":
         ORDER BY id ASC".format(argv[4])
         c.execute(query)
         for row in c.fetchall():
-            print(row)
+            if row[1] == argv[4]:
+                print(row)
         c.close()
         db.close()
     except IndexError:
