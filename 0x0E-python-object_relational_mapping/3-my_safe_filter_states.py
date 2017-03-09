@@ -18,9 +18,8 @@ if __name__ == "__main__":
         test = c.execute("SELECT * FROM states\
         WHERE name = %s\
         ORDER BY id ASC", (argv[4],))
-        while test > 0:
-            test = test - 1
-            print(c.fetchone())
+        for row in c.fetchall():
+            print(row)
         c.close()
         db.close()
     except IndexError:
