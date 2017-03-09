@@ -7,7 +7,6 @@ filter states by user input
 if __name__ == "__main__":
     from sys import argv
     import MySQLdb
-    import re
 
     try:
         db = MySQLdb.connect(host="localhost",
@@ -16,11 +15,9 @@ if __name__ == "__main__":
                              db=argv[3],
                              port=3306)
         c = db.cursor()
-        state = re.sub(r'\W+', '', argv[4].split(";")[0])
-        query = "SELECT * FROM states\
-        WHERE name = '{:s}'\
-        ORDER BY id ASC".format(state)
-        test = c.execute(query)
+        test = c.execute("SELECT * FROM states\
+        WHERE name = %s\
+        ORDER BY id ASC", (argv[4],))
         if test is 0:
             print("execute failed!")
         while test > 0:
