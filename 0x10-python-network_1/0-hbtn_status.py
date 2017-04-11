@@ -15,4 +15,4 @@ if __name__ == "__main__":
               "\t- content: {}\n"
               "\t- utf8 content: {:s}".format(type(html),
                                        html,
-                                       html.decode(encoding='UTF-8')))
+                                       html.decode('UTF-8')))
