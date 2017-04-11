@@ -11,5 +11,5 @@ if __name__ == "__main__":
         print("Number of results: {}".format(r.json()["count"]))
         for search_result in r.json().get("results"):
             print(search_result.get("name"))
-    except IndexError:
-        print("pass search parameter")
+    except:
+        pass
