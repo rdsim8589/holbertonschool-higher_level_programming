@@ -10,6 +10,6 @@ if __name__ == "__main__":
     print("""Body response:
 \t- type: {}
 \t- content: {}
-\t- utf8 content: {:s}""".format(type(r.content),
+    \t- utf8 content: {:s}""".format(type(r.text),
                                  r.content,
                                  r.text))
