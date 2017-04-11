@@ -8,8 +8,8 @@ from sys import argv
 if __name__ == "__main__":
     try:
         # urllib.request.urlopen(<url>) returns a HTTPResponse Object
-        req = urllib.request.urlopen(argv[1])
-        # info returns a dictionary of the HTTP header
-        print(req.info()['X-Request-Id'])
+        with urllib.request.urlopen(argv[1]) as request:
+            # info returns a dictionary of the HTTP header
+            print(request.info()['X-Request-Id'])
     except Exception as e:
-        print(e)
+        pass
