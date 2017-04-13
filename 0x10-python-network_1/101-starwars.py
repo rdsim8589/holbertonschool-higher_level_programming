@@ -11,10 +11,12 @@ if __name__ == "__main__":
         total_count = r.json()["count"]
         count = 0
         print("Number of result: {}".format(total_count))
-        while count != total_count:
+        while True:
             for search_result in r.json().get("results"):
                 print(search_result.get("name"))
+                count += 1
+            if count == total_count:
+                break
             r = requests.get(r.json().get("next"))
-            count += 1
     except Exception as e:
-        pass
+        print (e)
