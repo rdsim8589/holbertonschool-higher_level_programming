@@ -8,7 +8,7 @@ This is the Holberton Higher Level programming assignments
 | How to print text and variables using print | How to use strings|
 | What are indexing and slicing in Python | What is the official Holberton Python coding style and how to check your code with PEP 8 |
 
-## 0x01-0x01-python-if_else_loops_functions
+## 0x01-python-if_else_loops_functions
 | These assignments are based around python 3.4 and cover these questions | |
 |--------|---------------------|
 | How to use the if, if ... else statements | How to use comments |
