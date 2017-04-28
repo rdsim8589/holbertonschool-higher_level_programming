@@ -4,9 +4,8 @@ function factorial (num) {
   if (isNaN(num)) {
     num = 1;
   }
-  while (num > 0) {
-    total *= num;
-    num--;
+  for (let i = 1; i <= num; i++) {
+    total *= i;
   }
   console.log(total);
 }
