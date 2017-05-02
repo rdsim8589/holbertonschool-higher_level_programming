@@ -1,4 +1,4 @@
-let button = '#toggle_header';
+let button = 'DIV#toggle_header';
 $(button).ready(function () {
   $(button).addClass('red');
 });
